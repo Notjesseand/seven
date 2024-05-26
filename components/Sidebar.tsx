@@ -12,6 +12,8 @@ import Link from "next/link";
 
 const Sidebar = () => {
   return (
+    <div>
+
     <Sheet>
       <SheetTrigger>
         {" "}
@@ -32,6 +34,7 @@ const Sidebar = () => {
         </SheetHeader>
       </SheetContent>
     </Sheet>
+    </div>
   );
 };
 
