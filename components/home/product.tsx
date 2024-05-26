@@ -7,10 +7,10 @@ import { varianty } from "@/hooks/variant";
 
 const Product = () => {
   const [ref, isVisible] = useOnScreen({ threshold: 0.1 });
-  const [ref2, isVisible2] = useOnScreen({ threshold: 0.1 });
-  const [ref3, isVisible3] = useOnScreen({ threshold: 0.1 });
-  const [ref4, isVisible4] = useOnScreen({ threshold: 0.1 });
-  const [ref5, isVisible5] = useOnScreen({ threshold: 0.1 });
+  const [ref2, isVisible2] = useOnScreen({ threshold: 0.01 });
+  const [ref3, isVisible3] = useOnScreen({ threshold: 0.01 });
+  const [ref4, isVisible4] = useOnScreen({ threshold: 0.01 });
+  const [ref5, isVisible5] = useOnScreen({ threshold: 0.01 });
   const [ref6, isVisible6] = useOnScreen({ threshold: 0.1 });
   const variants = {
     hidden: { opacity: 0, x: 250 },
@@ -124,13 +124,13 @@ const Product = () => {
           <div className=" items-center justify-center text-center flex flex-col">
             <VscWorkspaceTrusted className="text-6xl text-slate-500 my-5" />
             <p className="text-base sm:text-xl font-montserrat font-semibold">
-              Compatible with IOS and Android
+              3 years worldwide warranty
             </p>
           </div>
         </motion.div>
       </div>
       {/* designed for your comfort */}
-      <div className=" w-11/12 sm:w-4/5 mx-auto bg-[url(https://res.cloudinary.com/dv62ty87r/image/upload/v1716660235/Mask-group-6_xnf21b.webp)] py-20 lg:py-0 lg:h-[85vh] rounded bg-cover bg-right mt-14 relative text-white">
+      <div className=" w-11/12 sm:w-4/5 mx-auto bg-[url(https://res.cloudinary.com/dv62ty87r/image/upload/v1716660235/Mask-group-6_xnf21b.webp)] py-20 lg:py-0 lg:h-[90vh] rounded bg-cover bg-right mt-14 relative text-white">
         {/* overlay */}
         <div className="absolute h-full w-full inset-0 bg-gradient-to-b sm:bg-gradient-to-r from-black opacity-50 sm:opacity-40 rounded"></div>
         <div className="relative px-3 md:p-7 sm:p-14 font-montserrat md:w-4/5 lg:w-3/5  flex flex-col h-full justify-center">
