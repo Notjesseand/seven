@@ -10,7 +10,11 @@ const Header = () => {
         {/* overlay */}
         <div className="absolute h-full w-full bg-gradient-to-t from-transparent to-black opacity-50  inset-0 "></div>
         <div className="w-full flex justify-between relative z-50">
-          <div className="h-7 w-16 bg-slate-600 "></div>
+          <img
+            src="https://res.cloudinary.com/dv62ty87r/image/upload/v1716538239/Premium_Vector___Wolf_tech_modern_simple_logo_icon_ideas-removebg-preview_je6aex.png"
+            alt=""
+            className="h-24 flex"
+          />
 
           <Sidebar />
         </div>
