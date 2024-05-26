@@ -16,7 +16,7 @@ const Product = () => {
     hidden: { opacity: 0, y: 250 },
     visible: { opacity: 1, y: 0 },
   };
-  
+
   return (
     <div className="min-h-screen flex flex-col justify-center w-full ">
       <div className="grid md:grid-cols-2 pt-12 px-6 gap-6 sm:px-9 lg:px-16">
@@ -88,10 +88,10 @@ const Product = () => {
         </div>
       </div>
       {/* designed for your comfort */}
-      <div className=" w-5/6 sm:w-4/5 mx-auto bg-[url(https://res.cloudinary.com/dv62ty87r/image/upload/v1716660235/Mask-group-6_xnf21b.webp)] h-[550px] rounded bg-cover bg-right mt-14 relative text-white">
+      <div className=" w-11/12 sm:w-4/5 mx-auto bg-[url(https://res.cloudinary.com/dv62ty87r/image/upload/v1716660235/Mask-group-6_xnf21b.webp)] py-10 lg:py-0 lg:h-[85vh] rounded bg-cover bg-right mt-14 relative text-white">
         {/* overlay */}
         <div className="absolute h-full w-full inset-0 bg-gradient-to-b sm:bg-gradient-to-r from-black opacity-40 rounded"></div>
-        <div className="relative p-7 sm:p-14 font-montserrat  md:w-4/5 lg:w-3/5  flex flex-col h-full justify-center">
+        <div className="relative px-3 md:p-7 sm:p-14 font-montserrat md:w-4/5 lg:w-3/5  flex flex-col h-full justify-center">
           <motion.div
             // @ts-ignore
             ref={ref2}
@@ -100,18 +100,17 @@ const Product = () => {
             variants={variant2}
             transition={{ duration: 1 }}
           >
-
-          <p className="text-4xl font-montserrat font-semibold flex">
-            Designed for your comfort
-          </p>
-          <p className="leading-7 mt-3">
-            Experience unparalleled comfort with our expertly crafted
-            headphones. Engineered with precision, our headphones ensure a
-            perfect fit while delivering exceptional sound quality. Enjoy
-            long-lasting comfort with every use, thanks to our innovative design
-            and premium materials. Elevate your listening experience and immerse
-            yourself in sound like never before.
-          </p>
+            <p className="text-4xl font-montserrat font-semibold flex">
+              Designed for your comfort
+            </p>
+            <p className="leading-7 mt-3">
+              Experience unparalleled comfort with our expertly crafted
+              headphones. Engineered with precision, our headphones ensure a
+              perfect fit while delivering exceptional sound quality. Enjoy
+              long-lasting comfort with every use, thanks to our innovative
+              design and premium materials. Elevate your listening experience
+              and immerse yourself in sound like never before.
+            </p>
           </motion.div>
         </div>
       </div>
