@@ -6,7 +6,7 @@ import Sidebar from "./Sidebar";
 const Header = () => {
   return (
     <div className="flex w-full fixed z-50">
-      <div className="w-full flex justify-between px-3  sm:px-16 py-3 bg-gradient-to-b from relative">
+      <div className="w-full flex justify-between px-3  sm:px-16 py-1 sm:py-3 bg-gradient-to-b from relative">
         {/* overlay */}
         <div className="absolute h-full w-full bg-gradient-to-t from-transparent to-black opacity-50  inset-0 "></div>
         <div className="w-full flex items-center justify-between relative z-50 pr-5">

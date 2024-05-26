@@ -5,7 +5,7 @@ import useOnScreen from "@/hooks/scroll";
 const Product = () => {
   const [ref, isVisible] = useOnScreen({ threshold: 0.1 });
   const variants = {
-    hidden: { opacity: 0, x: 350 },
+    hidden: { opacity: 0, x: -350 },
     visible: { opacity: 1, x: 0 },
   };
   return (
@@ -18,7 +18,7 @@ const Product = () => {
         />
         <div className="flex flex-col justify-center items-center px-4 md:overflow-hidden">
           <motion.div
-          className="overflow-hidden "
+            className="overflow-hidden "
             // @ts-ignore
             ref={ref}
             initial="hidden"
