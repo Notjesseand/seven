@@ -3,13 +3,20 @@ import { motion } from "framer-motion";
 import useOnScreen from "@/hooks/scroll";
 import { BsPhone } from "react-icons/bs";
 import { VscWorkspaceTrusted } from "react-icons/vsc";
+import { varianty } from "@/hooks/variant";
 
 const Product = () => {
   const [ref, isVisible] = useOnScreen({ threshold: 0.1 });
+  const [ref2, isVisible2] = useOnScreen({ threshold: 0.1 });
   const variants = {
     hidden: { opacity: 0, x: 250 },
     visible: { opacity: 1, x: 0 },
   };
+  const variant2 = {
+    hidden: { opacity: 0, y: 250 },
+    visible: { opacity: 1, y: 0 },
+  };
+  
   return (
     <div className="min-h-screen flex flex-col justify-center w-full ">
       <div className="grid md:grid-cols-2 pt-12 px-6 gap-6 sm:px-9 lg:px-16">
@@ -85,6 +92,15 @@ const Product = () => {
         {/* overlay */}
         <div className="absolute h-full w-full inset-0 bg-gradient-to-b sm:bg-gradient-to-r from-black opacity-40 rounded"></div>
         <div className="relative p-7 sm:p-14 font-montserrat  md:w-4/5 lg:w-3/5  flex flex-col h-full justify-center">
+          <motion.div
+            // @ts-ignore
+            ref={ref2}
+            initial="hidden"
+            animate={isVisible2 ? "visible" : "hidden"}
+            variants={variant2}
+            transition={{ duration: 1 }}
+          >
+
           <p className="text-4xl font-montserrat font-semibold flex">
             Designed for your comfort
           </p>
@@ -96,6 +112,7 @@ const Product = () => {
             and premium materials. Elevate your listening experience and immerse
             yourself in sound like never before.
           </p>
+          </motion.div>
         </div>
       </div>
     </div>
