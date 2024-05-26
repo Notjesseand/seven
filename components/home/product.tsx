@@ -1,7 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
+import useOnScreen from "@/hooks/scroll";
 
 const product = () => {
+  const [ref, isVisible] = useOnScreen({ threshold: 0.1 });
   const variants = {
     hidden: { opacity: 0, x: 350 },
     visible: { opacity: 1, x: 0 },
@@ -16,8 +18,11 @@ const product = () => {
         />
         <div className="flex flex-col justify-center items-center px-4">
           <motion.div
+            // @ts-ignore
+            ref={ref}
             initial="hidden"
-            animate="visible"
+            animate={isVisible ? "visible" : "hidden"}
+            // animate="visible"
             variants={variants}
             transition={{ duration: 1 }}
           >
@@ -29,7 +34,9 @@ const product = () => {
               <li className="dot-list">Quick Start Guide</li>
               <li className="dot-list"> USB Charging Cable</li>
             </ul>
-            <button className="px-8 py-2 border-black hover:bg-black hover:text-white border rounded-full mt-6">Buy online</button>
+            <button className="px-8 py-2 border-black hover:bg-black hover:text-white border rounded-full mt-6">
+              Buy online
+            </button>
           </motion.div>
         </div>
       </div>

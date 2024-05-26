@@ -15,7 +15,7 @@ const Sidebar = () => {
     <Sheet>
       <SheetTrigger>
         {" "}
-        <HiBars2 className="text-5xl cursor-pointer" />
+        <HiBars2 className="text-5xl cursor-pointer flex z-50" />
       </SheetTrigger>
       <SheetContent>
         <SheetHeader>
