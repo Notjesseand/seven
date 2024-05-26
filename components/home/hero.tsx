@@ -48,7 +48,7 @@ const Hero = () => {
                 alt=""
                 className="h-20"
               />
-              <p className="font-montserrat text-xl sm:text-2xl font-semibold">
+              <p className="font-montserrat text-xl sm:text-2xl sm:font-semibold">
                 Transparency Mode
               </p>
             </div>
@@ -69,7 +69,7 @@ const Hero = () => {
               alt=""
               className="h-20"
               />
-            <p className="font-montserrat text-xl sm:text-2xl font-semibold">
+            <p className="font-montserrat text-xl sm:text-2xl sm:font-semibold">
               Noise Cancellation
             </p>
           </div>
