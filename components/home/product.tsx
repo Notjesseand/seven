@@ -8,6 +8,10 @@ import { varianty } from "@/hooks/variant";
 const Product = () => {
   const [ref, isVisible] = useOnScreen({ threshold: 0.1 });
   const [ref2, isVisible2] = useOnScreen({ threshold: 0.1 });
+  const [ref3, isVisible3] = useOnScreen({ threshold: 0.1 });
+  const [ref4, isVisible4] = useOnScreen({ threshold: 0.1 });
+  const [ref5, isVisible5] = useOnScreen({ threshold: 0.1 });
+  const [ref6, isVisible6] = useOnScreen({ threshold: 0.1 });
   const variants = {
     hidden: { opacity: 0, x: 250 },
     visible: { opacity: 1, x: 0 },
@@ -51,17 +55,27 @@ const Product = () => {
       {/* features */}
       <div className="grid  sm:grid-cols-2 md:grid-cols-4 pt-20 px-5 md:px-10 gap-y-7">
         {/* battery life */}
-        <div className=" items-center justify-center text-center flex flex-col">
-          <img
-            src="https://res.cloudinary.com/dv62ty87r/image/upload/v1716721154/Screenshot_2024-05-26_054408-removebg-preview_ihmjlg.png"
-            alt=""
-            className="h-24"
-          />
-          <p className="text-base sm:text-xl font-montserrat font-semibold">
-            48 hours battery life
-          </p>
-        </div>
+        <motion.div
+          // @ts-ignore
+          ref={ref3}
+          initial="hidden"
+          animate={isVisible3 ? "visible" : "hidden"}
+          variants={variant2}
+          transition={{ duration: 1 }}
+        >
+          <div className=" items-center justify-center text-center flex flex-col">
+            <img
+              src="https://res.cloudinary.com/dv62ty87r/image/upload/v1716721154/Screenshot_2024-05-26_054408-removebg-preview_ihmjlg.png"
+              alt=""
+              className="h-24"
+            />
+            <p className="text-base sm:text-xl font-montserrat font-semibold">
+              48 hours battery life
+            </p>
+          </div>
+        </motion.div>
         {/* noise cancellation */}
+
         <div className=" items-center justify-center text-center flex flex-col">
           <img
             src="https://res.cloudinary.com/dv62ty87r/image/upload/v1716663000/Screenshot_2024-05-25_134901-removebg-preview_hyswbb.png"
@@ -73,6 +87,7 @@ const Product = () => {
           </p>
         </div>
         {/* compatible */}
+
         <div className=" items-center justify-center text-center flex flex-col">
           <BsPhone className="text-6xl text-slate-500 my-5" />
           <p className="text-base sm:text-xl font-montserrat font-semibold">
