@@ -26,7 +26,7 @@ const Innovations = () => {
           transition={{ duration: 1 }}
         >
           <p className="text-3xl sm:text-4xl font-semibold">Innovations</p>
-          <p className="leading-7 text-lg">
+          <p className="leading-7 text-base sm:text-lg">
             Discover the cutting-edge innovations that set our headphones apart.
             Engineered with the latest technology, our headphones offer
             unparalleled features designed to enhance your listening experience.
