@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import useOnScreen from "@/hooks/scroll";
 
-const product = () => {
+const Product = () => {
   const [ref, isVisible] = useOnScreen({ threshold: 0.1 });
   const variants = {
     hidden: { opacity: 0, x: 350 },
@@ -44,4 +44,4 @@ const product = () => {
   );
 };
 
-export default product;
+export default Product;
