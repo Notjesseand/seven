@@ -7,8 +7,7 @@ import { motion } from "framer-motion";
 import useOnScreen from "@/hooks/scroll";
 
 export default function Page() {
-
-   const [ref, isVisible] = useOnScreen({ threshold: 0.1 });
+  const [ref, isVisible] = useOnScreen({ threshold: 0.1 });
 
   const variants = {
     hidden: { opacity: 0, x: -350 },
@@ -24,7 +23,7 @@ export default function Page() {
           <div className="absolute h-full w-full bg-gradient-to-t from-black opacity-60 to-transparent "></div>
           <div className="gap-y-10 relative">
             <motion.div
-            // @ts-ignore
+              // @ts-ignore
               ref={ref}
               initial="hidden"
               animate={isVisible ? "visible" : "hidden"}
@@ -63,9 +62,7 @@ export default function Page() {
         </div>
       </div>
       <Product />
-      <div className="h-screen">
-
-      </div>
+      <div className="h-screen"></div>
     </div>
   );
 }
