@@ -2,7 +2,7 @@ import React from "react";
 import useOnScreen from "@/hooks/scroll";
 import { motion } from "framer-motion";
 
-const innovations = () => {
+const Innovations = () => {
   const [ref, isVisible] = useOnScreen({ threshold: 0.1 });
 
   const variants = {
@@ -42,4 +42,4 @@ const innovations = () => {
   );
 };
 
-export default innovations;
+export default Innovations;

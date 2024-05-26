@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import useOnScreen from "@/hooks/scroll";
 
-const hero = () => {
+const Hero = () => {
   const [ref, isVisible] = useOnScreen({ threshold: 0.1 });
 
   const variants = {
@@ -55,4 +55,4 @@ const hero = () => {
   );
 };
 
-export default hero;
+export default Hero;
