@@ -20,12 +20,10 @@ const Product = () => {
         />
         <div className="flex flex-col justify-center items-center px-4">
           <motion.div
-            // className="overflow-hidden "
             // @ts-ignore
             ref={ref}
             initial="hidden"
             animate={isVisible ? "visible" : "hidden"}
-            // animate="visible"
             variants={variants}
             transition={{ duration: 1 }}
           >
@@ -79,6 +77,24 @@ const Product = () => {
           <VscWorkspaceTrusted className="text-6xl text-slate-500 my-5" />
           <p className="text-base sm:text-xl font-montserrat font-semibold">
             Compatible with IOS and Android
+          </p>
+        </div>
+      </div>
+      {/* designed for your comfort */}
+      <div className=" w-5/6 sm:w-4/5 mx-auto bg-[url(https://res.cloudinary.com/dv62ty87r/image/upload/v1716660235/Mask-group-6_xnf21b.webp)] h-[550px] rounded bg-cover bg-right mt-14 relative text-white">
+        {/* overlay */}
+        <div className="absolute h-full w-full inset-0 bg-gradient-to-b sm:bg-gradient-to-r from-black opacity-40 rounded"></div>
+        <div className="relative p-7 sm:p-14 font-montserrat  md:w-4/5 lg:w-3/5  flex flex-col h-full justify-center">
+          <p className="text-4xl font-montserrat font-semibold flex">
+            Designed for your comfort
+          </p>
+          <p className="leading-7 mt-3">
+            Experience unparalleled comfort with our expertly crafted
+            headphones. Engineered with precision, our headphones ensure a
+            perfect fit while delivering exceptional sound quality. Enjoy
+            long-lasting comfort with every use, thanks to our innovative design
+            and premium materials. Elevate your listening experience and immerse
+            yourself in sound like never before.
           </p>
         </div>
       </div>
