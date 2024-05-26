@@ -29,9 +29,9 @@ const Product = () => {
             variants={variants}
             transition={{ duration: 1 }}
           >
-            <p className="text-3xl">Seven wireless headphones</p>
+            <p className="text-2xl sm:text-3xl">HIM wireless headphones</p>
             <p className="text-xl font-montserrat mt-3">$350</p>
-            <ul className="flex flex-col gap-3 mt-5 text-xl">
+            <ul className="flex flex-col gap-3 mt-5 text-base sm:text-xl ">
               <li className="dot-list">Carrying Case</li>
               <li className="dot-list">Seven Wireless Headphones</li>
               <li className="dot-list">Quick Start Guide</li>
@@ -52,7 +52,7 @@ const Product = () => {
             alt=""
             className="h-24"
           />
-          <p className="text-xl font-montserrat font-semibold">
+          <p className="text-base sm:text-xl font-montserrat font-semibold">
             48 hours battery life
           </p>
         </div>
@@ -63,21 +63,21 @@ const Product = () => {
             alt=""
             className="h-24"
           />
-          <p className="text-xl font-montserrat font-semibold">
+          <p className="text-base sm:text-xl font-montserrat font-semibold">
             Active noise cancelling
           </p>
         </div>
         {/* compatible */}
         <div className=" items-center justify-center text-center flex flex-col">
           <BsPhone className="text-6xl text-slate-500 my-5" />
-          <p className="text-xl font-montserrat font-semibold">
+          <p className="text-base sm:text-xl font-montserrat font-semibold">
             Compatible with IOS and Android
           </p>
         </div>
         {/* warranty */}
         <div className=" items-center justify-center text-center flex flex-col">
           <VscWorkspaceTrusted className="text-6xl text-slate-500 my-5" />
-          <p className="text-xl font-montserrat font-semibold">
+          <p className="text-base sm:text-xl font-montserrat font-semibold">
             Compatible with IOS and Android
           </p>
         </div>
