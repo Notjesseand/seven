@@ -5,20 +5,20 @@ import useOnScreen from "@/hooks/scroll";
 const Product = () => {
   const [ref, isVisible] = useOnScreen({ threshold: 0.1 });
   const variants = {
-    hidden: { opacity: 0, x: -350 },
+    hidden: { opacity: 0, x: 250 },
     visible: { opacity: 1, x: 0 },
   };
   return (
-    <div className="min-h-screen flex flex-col justify-center">
+    <div className="min-h-screen flex flex-col justify-center w-full ">
       <div className="grid sm:grid-cols-2 pt-12 px-6 gap-y-5 sm:px-16">
         <img
           src="https://res.cloudinary.com/dv62ty87r/image/upload/v1716690113/headphones_wkjogt.jpg"
           alt=""
           className="rounded-lg w-full sm:w-[30rem] aspect-auto sm:aspect-square flex mx-auto"
         />
-        <div className="flex flex-col justify-center items-center px-4 md:overflow-hidden">
+        <div className="flex flex-col justify-center items-center px-4">
           <motion.div
-            className="overflow-hidden "
+            // className="overflow-hidden "
             // @ts-ignore
             ref={ref}
             initial="hidden"
