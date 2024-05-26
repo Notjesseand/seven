@@ -7,7 +7,8 @@ import { motion } from "framer-motion";
 import useOnScreen from "@/hooks/scroll";
 
 export default function Page() {
-  const [ref, isVisible] = useOnScreen({ threshold: 0.1 });
+
+   const [ref, isVisible] = useOnScreen({ threshold: 0.1 });
 
   const variants = {
     hidden: { opacity: 0, x: -350 },
@@ -15,18 +16,18 @@ export default function Page() {
   };
 
   return (
-    <div className=" my-0 py-0 font-custom">
-      <div className="min-h-screen bg-[url(https://res.cloudinary.com/dv62ty87r/image/upload/v1716664752/Mask-group-24_jnr5eg.jpg)] [url(https://res.cloudinary.com/dv62ty87r/image/upload/v1716660235/Mask-group-2_syfyo0.jpg)] bg-cover flex flex-col relative text-white bg-center">
+    <div className=" my-0 py-0 font-custom overflow-hidden">
+      <div className="min-h-screen bg-[url(https://res.cloudinary.com/dv62ty87r/image/upload/v1716664752/Mask-group-24_jnr5eg.jpg)] -[url(https://res.cloudinary.com/dv62ty87r/image/upload/v1716660235/Mask-group-2_syfyo0.jpg)] bg-cover flex flex-col relative text-white bg-fixed bg-center">
         <Header />
         <div className="h-full flex-grow flex items-center relative ">
           {/* overlay */}
           <div className="absolute h-full w-full bg-gradient-to-t from-black opacity-60 to-transparent "></div>
           <div className="gap-y-10 relative">
             <motion.div
-              // @ts-ignore
-              // ref={ref}
+            // @ts-ignore
+              ref={ref}
               initial="hidden"
-              animate={"visible"}
+              animate={isVisible ? "visible" : "hidden"}
               variants={variants}
               transition={{ duration: 1 }}
             >
@@ -62,7 +63,9 @@ export default function Page() {
         </div>
       </div>
       <Product />
-      <div className="h-screen"></div>
+      <div className="h-screen">
+
+      </div>
     </div>
   );
 }

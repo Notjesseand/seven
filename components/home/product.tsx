@@ -16,8 +16,9 @@ const Product = () => {
           alt=""
           className="rounded-lg w-full sm:w-[30rem] aspect-auto sm:aspect-square flex mx-auto"
         />
-        <div className="flex flex-col justify-center items-center px-4">
+        <div className="flex flex-col justify-center items-center px-4 md:overflow-hidden">
           <motion.div
+          className="overflow-hidden "
             // @ts-ignore
             ref={ref}
             initial="hidden"
