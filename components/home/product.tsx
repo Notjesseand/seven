@@ -179,7 +179,7 @@ const Product = () => {
             <p className="leading-7 mt-3">
               Experience sound like never before with our state-of-the-art
               headphones. Designed for audio clarity, our headphones ensure
-              every note and beat is delivered with precision. Whether you're
+              every note and beat is delivered with precision. Whether you&apos;re
               enjoying your favorite music, gaming, or taking calls, our
               advanced sound technology offers unmatched quality. Dive into a
               world of clear, crisp, and immersive audio.
