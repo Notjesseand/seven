@@ -88,7 +88,7 @@ const Product = () => {
         </div>
       </div>
       {/* designed for your comfort */}
-      <div className=" w-11/12 sm:w-4/5 mx-auto bg-[url(https://res.cloudinary.com/dv62ty87r/image/upload/v1716660235/Mask-group-6_xnf21b.webp)] py-10 lg:py-0 lg:h-[85vh] rounded bg-cover bg-right mt-14 relative text-white">
+      <div className=" w-11/12 sm:w-4/5 mx-auto bg-[url(https://res.cloudinary.com/dv62ty87r/image/upload/v1716660235/Mask-group-6_xnf21b.webp)] py-20 lg:py-0 lg:h-[85vh] rounded bg-cover bg-right mt-14 relative text-white">
         {/* overlay */}
         <div className="absolute h-full w-full inset-0 bg-gradient-to-b sm:bg-gradient-to-r from-black opacity-40 rounded"></div>
         <div className="relative px-3 md:p-7 sm:p-14 font-montserrat md:w-4/5 lg:w-3/5  flex flex-col h-full justify-center">
