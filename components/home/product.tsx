@@ -57,9 +57,9 @@ const Product = () => {
         {/* battery life */}
         <motion.div
           // @ts-ignore
-          ref={ref3}
+          ref={ref2}
           initial="hidden"
-          animate={isVisible3 ? "visible" : "hidden"}
+          animate={isVisible2 ? "visible" : "hidden"}
           variants={variant2}
           transition={{ duration: 1 }}
         >
@@ -76,31 +76,58 @@ const Product = () => {
         </motion.div>
         {/* noise cancellation */}
 
-        <div className=" items-center justify-center text-center flex flex-col">
-          <img
-            src="https://res.cloudinary.com/dv62ty87r/image/upload/v1716663000/Screenshot_2024-05-25_134901-removebg-preview_hyswbb.png"
-            alt=""
-            className="h-24"
-          />
-          <p className="text-base sm:text-xl font-montserrat font-semibold">
-            Active noise cancelling
-          </p>
-        </div>
-        {/* compatible */}
+        <motion.div
+          // @ts-ignore
+          ref={ref3}
+          initial="hidden"
+          animate={isVisible3 ? "visible" : "hidden"}
+          variants={variant2}
+          transition={{ duration: 1 }}
+        >
+          <div className=" items-center justify-center text-center flex flex-col">
+            <img
+              src="https://res.cloudinary.com/dv62ty87r/image/upload/v1716663000/Screenshot_2024-05-25_134901-removebg-preview_hyswbb.png"
+              alt=""
+              className="h-24"
+            />
+            <p className="text-base sm:text-xl font-montserrat font-semibold">
+              Active noise cancelling
+            </p>
+          </div>
+        </motion.div>
 
-        <div className=" items-center justify-center text-center flex flex-col">
-          <BsPhone className="text-6xl text-slate-500 my-5" />
-          <p className="text-base sm:text-xl font-montserrat font-semibold">
-            Compatible with IOS and Android
-          </p>
-        </div>
+        {/* compatible */}
+        <motion.div
+          // @ts-ignore
+          ref={ref4}
+          initial="hidden"
+          animate={isVisible4 ? "visible" : "hidden"}
+          variants={variant2}
+          transition={{ duration: 1 }}
+        >
+          <div className=" items-center justify-center text-center flex flex-col">
+            <BsPhone className="text-6xl text-slate-500 my-5" />
+            <p className="text-base sm:text-xl font-montserrat font-semibold">
+              Compatible with IOS and Android
+            </p>
+          </div>
+        </motion.div>
         {/* warranty */}
-        <div className=" items-center justify-center text-center flex flex-col">
-          <VscWorkspaceTrusted className="text-6xl text-slate-500 my-5" />
-          <p className="text-base sm:text-xl font-montserrat font-semibold">
-            Compatible with IOS and Android
-          </p>
-        </div>
+        <motion.div
+          // @ts-ignore
+          ref={ref5}
+          initial="hidden"
+          animate={isVisible5 ? "visible" : "hidden"}
+          variants={variant2}
+          transition={{ duration: 1 }}
+        >
+          <div className=" items-center justify-center text-center flex flex-col">
+            <VscWorkspaceTrusted className="text-6xl text-slate-500 my-5" />
+            <p className="text-base sm:text-xl font-montserrat font-semibold">
+              Compatible with IOS and Android
+            </p>
+          </div>
+        </motion.div>
       </div>
       {/* designed for your comfort */}
       <div className=" w-11/12 sm:w-4/5 mx-auto bg-[url(https://res.cloudinary.com/dv62ty87r/image/upload/v1716660235/Mask-group-6_xnf21b.webp)] py-20 lg:py-0 lg:h-[85vh] rounded bg-cover bg-right mt-14 relative text-white">
@@ -109,9 +136,9 @@ const Product = () => {
         <div className="relative px-3 md:p-7 sm:p-14 font-montserrat md:w-4/5 lg:w-3/5  flex flex-col h-full justify-center">
           <motion.div
             // @ts-ignore
-            ref={ref2}
+            ref={ref6}
             initial="hidden"
-            animate={isVisible2 ? "visible" : "hidden"}
+            animate={isVisible6 ? "visible" : "hidden"}
             variants={variant2}
             transition={{ duration: 1 }}
           >
