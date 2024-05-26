@@ -135,7 +135,7 @@ const Product = () => {
       {/* designed for your comfort */}
       <div className=" w-11/12 sm:w-4/5 mx-auto bg-[url(https://res.cloudinary.com/dv62ty87r/image/upload/v1716660235/Mask-group-6_xnf21b.webp)] py-20 lg:py-0 lg:h-[90vh] rounded bg-cover bg-right mt-14 relative text-white">
         {/* overlay */}
-        <div className="absolute h-full w-full inset-0 bg-gradient-to-b sm:bg-gradient-to-r from-black opacity-50 sm:opacity-40 rounded"></div>
+        <div className="absolute h-full w-full inset-0 bg-gradient-to-b sm:bg-gradient-to-r from-black opacity-75 sm:opacity-40 rounded"></div>
         <div className="relative px-3 md:p-7 sm:p-14 font-montserrat md:w-4/5 lg:w-3/5  flex flex-col h-full justify-center">
           <motion.div
             // @ts-ignore
@@ -163,7 +163,7 @@ const Product = () => {
       {/* clear sound */}
       <div className=" w-11/12 sm:w-4/5 mx-auto bg-[url(https://res.cloudinary.com/dv62ty87r/image/upload/v1716660235/Mask-group-4_ujijgz.webp)] py-20 lg:py-0 lg:h-[90vh] justify-end sm:flex rounded bg-cover bg-left mt-14 relative text-white">
         {/* overlay */}
-        <div className="absolute h-full w-full inset-0 bg-gradient-to-b sm:bg-gradient-to-r from-black opacity-50 sm:opacity-40 rounded"></div>
+        <div className="absolute h-full w-full inset-0 bg-gradient-to-b sm:bg-gradient-to-l from-black opacity-75 sm:opacity-40 rounded"></div>
         <div className="relative px-3 md:p-7 sm:p-14 font-montserrat md:w-4/5 lg:w-3/5  flex flex-col h-full justify-center">
           <motion.div
             // @ts-ignore
@@ -191,7 +191,7 @@ const Product = () => {
       {/* modern aesthetics */}
       <div className=" w-11/12 sm:w-4/5 mx-auto bg-[url(https://res.cloudinary.com/dv62ty87r/image/upload/v1716660235/Mask-group-9_skfc3c.webp)] py-20 lg:py-0 lg:h-[90vh] rounded bg-cover bg-right mt-14 relative text-white">
         {/* overlay */}
-        <div className="absolute h-full w-full inset-0 bg-gradient-to-b sm:bg-gradient-to-r from-black opacity-50 sm:opacity-40 rounded"></div>
+        <div className="absolute h-full w-full inset-0 bg-gradient-to-b sm:bg-gradient-to-r from-black opacity-75 sm:opacity-40 rounded"></div>
         <div className="relative px-3 md:p-7 sm:p-14 font-montserrat md:w-4/5 lg:w-3/5  flex flex-col h-full justify-center">
           <motion.div
             // @ts-ignore

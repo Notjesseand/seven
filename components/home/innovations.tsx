@@ -10,7 +10,7 @@ const Innovations = () => {
     visible: { opacity: 1, x: 0 },
   };
   return (
-    <div className="grid sm:grid-cols-2 gap-y-7 pt-24 px-14">
+    <div className="grid sm:grid-cols-2 gap-y-7 pt-24 px-7 sm:px-8 md:px-14">
       <img
         src="https://res.cloudinary.com/dv62ty87r/image/upload/v1716745026/innovations_z6kx1n.jpg"
         alt=""
