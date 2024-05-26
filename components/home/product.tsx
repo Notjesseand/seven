@@ -55,7 +55,7 @@ const Product = () => {
         </div>
       </div>
       {/* features */}
-      <div className="grid  sm:grid-cols-2 md:grid-cols-4 pt-20 px-5 md:px-10 gap-y-7">
+      <div className="grid sm:grid-cols-2 md:grid-cols-4 pt-20 px-5 md:px-10 gap-y-12 pb-10">
         {/* battery life */}
         <motion.div
           // @ts-ignore

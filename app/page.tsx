@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Product from "@/components/home/product";
 import Innovations from "@/components/home/innovations";
 import Hero from "@/components/home/hero";
+import Experts from "@/components/home/experts";
 import { motion } from "framer-motion";
 import useOnScreen from "@/hooks/scroll";
 
