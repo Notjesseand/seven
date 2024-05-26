@@ -1,13 +1,13 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
 const config = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-	],
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -58,6 +58,42 @@ const config = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      fontFamily: {
+        // Define your custom font families here
+
+        custom: [
+          "Poppins", // Use "Poppins" for the custom font family
+          "system-ui",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "Segoe UI",
+          "Roboto",
+          "Helvetica Neue",
+          "Arial",
+          "sans-serif",
+        ],
+        poppins: ["Poppins"],
+        montserrat: [
+          "Montserrat", // Use "Montserrat" for the Montserrat font family
+          "Poppins",
+          "sans-serif",
+        ],
+        display: [
+          "Darumadrop One", // Use "Darumadrop One" for the display font family
+          "sans-serif",
+        ],
+        satisfy: [
+          "Satisfy", // Use "Satisfy" for the Satisfy font family
+          "cursive",
+        ],
+        script: [
+          "Bad Script", // Use "Bad Script" for the Bad Script font family
+          "cursive",
+        ],
+        noto: ["Noto Sans"],
+        open: ["Open Sans"],
+        nunito: ["Nunito Sans"],
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
@@ -75,6 +111,6 @@ const config = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config
+} satisfies Config;
 
-export default config
+export default config;

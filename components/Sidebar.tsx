@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import {
   Sheet,
   SheetContent,
@@ -8,7 +8,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { HiBars2 } from "react-icons/hi2";
-
+import Link from "next/link";
 
 const Sidebar = () => {
   return (
@@ -19,15 +19,20 @@ const Sidebar = () => {
       </SheetTrigger>
       <SheetContent>
         <SheetHeader>
-          <SheetTitle>Are you absolutely sure?</SheetTitle>
-          <SheetDescription>
-            This action cannot be undone. This will permanently delete your
-            account and remove your data from our servers.
-          </SheetDescription>
+          <div className="text-center w-full space-y-3 pt-14 text-xl font-nunito">
+
+          <Link href="/" className="flex text-center justify-center">Home</Link>
+          <Link href="" className="flex text-center justify-center">About Us</Link>
+          <Link href="" className="flex text-center justify-center">Shop</Link>
+          <Link href="" className="flex text-center justify-center">News</Link>
+          <Link href="" className="flex text-center justify-center">Contact</Link>
+          
+          </div>
+          
         </SheetHeader>
       </SheetContent>
     </Sheet>
   );
-}
+};
 
-export default Sidebar
+export default Sidebar;

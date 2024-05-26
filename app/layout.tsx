@@ -36,6 +36,10 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap"
           rel="stylesheet"
         />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+          rel="stylesheet"
+        />
       </head>
       <body className="font-custom">{children}</body>
     </html>

@@ -74,3 +74,8 @@
       @apply bg-background text-foreground;
     }
   }
+
+  .dot-list {
+  list-style-type: disc; /* This sets the list item marker to a dot */
+  padding-left: 20px; /* Adjust padding as needed */
+}
