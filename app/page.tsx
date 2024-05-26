@@ -24,9 +24,9 @@ export default function Page() {
           <div className="gap-y-10 relative">
             <motion.div
               // @ts-ignore
-              ref={ref}
+              // ref={ref}
               initial="hidden"
-              animate={isVisible ? "visible" : "hidden"}
+              animate={"visible"}
               variants={variants}
               transition={{ duration: 1 }}
             >
