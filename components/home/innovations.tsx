@@ -20,7 +20,7 @@ const Innovations = () => {
         <img
           src="https://res.cloudinary.com/dv62ty87r/image/upload/v1716745026/innovations_z6kx1n.jpg"
           alt=""
-          className=" w-11/12 sm:w-4/5 rounded-lg flex mx-auto"
+          className=" w-full sm:w-4/5 rounded-lg flex mx-auto"
         />
         <div className="flex flex-col justify-center  items-center">
           <motion.div
@@ -75,7 +75,7 @@ const Innovations = () => {
         <img
           src="https://res.cloudinary.com/dv62ty87r/image/upload/v1716750001/tech_ejgv2q.jpg"
           alt=""
-          className=" w-11/12 sm:w-4/5 rounded-lg flex mx-auto"
+          className=" w-full sm:w-4/5 rounded-lg flex mx-auto"
         />
       </div>
     </>
