@@ -31,7 +31,7 @@ const Innovations = () => {
             Engineered with the latest technology, our headphones offer
             unparalleled features designed to enhance your listening experience.
           </p>
-          <ul className="flex flex-col gap-3 mt-5 text-base sm:text-xl ">
+          <ul className="flex flex-col gap-3 mt-5 text-base sm:text-lg ">
             <li className="dot-list">Transparency Mode</li>
             <li className="dot-list">Active Noise Cancelling</li>
             <li className="dot-list">Ultra Light Carrying Case</li>
