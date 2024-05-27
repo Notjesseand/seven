@@ -28,6 +28,7 @@ const Page = () => {
       <div className="bg-[url(https://res.cloudinary.com/dv62ty87r/image/upload/v1715771549/samples/landscapes/architecture-signs.jpg)] bg-cover bg-center h-72 sm:h-96 relative">
         {/* overlay */}
         <div className="absolute h-full w-full bg-black inset-0 opacity-60"></div>
+        {/* @ts-ignore */}
         <Header />
         <div className="pt-44 px-7 sm:px-24 relative">
           <motion.div
@@ -90,8 +91,8 @@ const Page = () => {
               product design, we focus on innovation and quality. Each member of
               our team brings a unique perspective, ensuring that our headphones
               are not only technologically advanced but also user-friendly and
-              stylish. We&apos;re here to enhance your audio journey, one headphone
-              at a time.
+              stylish. We&apos;re here to enhance your audio journey, one
+              headphone at a time.
             </p>
           </div>
         </motion.div>
@@ -176,7 +177,7 @@ const Page = () => {
           className="rounded-lg w-full md:w-[30rem] aspect-auto flex mx-auto"
         />
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };

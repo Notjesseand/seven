@@ -4,7 +4,11 @@ import { HiBars2 } from "react-icons/hi2";
 import Sidebar from "./Sidebar";
 import Cart from "./shop/cart";
 
-const Header = () => {
+const Header = ({ count, cart }: { count: number; cart: any[] }) => {
+  const totalCount = count;
+  const carti = cart;
+  
+
   return (
     <div className="flex w-full fixed z-50">
       <div className="w-full flex justify-between px-3  sm:px-16 py-1 sm:py-3 bg-gradient-to-b from relative">
@@ -20,10 +24,10 @@ const Header = () => {
           </Link>
 
           <div className="flex items-center gap-3">
-          <Cart/>
-          <Sidebar />
-          </div>
+            {totalCount > 0 ? <Cart count={totalCount} cart={carti} /> : ""}
 
+            <Sidebar />
+          </div>
         </div>
       </div>
     </div>
