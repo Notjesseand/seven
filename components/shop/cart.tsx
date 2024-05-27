@@ -16,7 +16,7 @@ const Cart = ({ count, cart }: { count: any; cart: any[] }) => {
   const cartData = cart;
 
   return (
-    <div>
+    <div className="overflow-visible ">
       <Sheet>
         <SheetTrigger>
           {" "}

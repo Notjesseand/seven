@@ -6,9 +6,11 @@ import useOnScreen from "@/hooks/scroll";
 import { Items } from "@/components/shop/data";
 import Carousel from "@/components/shop/carousel";
 import Footer from "@/components/Footer";
+import { useToast } from "@/components/ui/use-toast";
 
 const Page = () => {
   const [ref, isVisible] = useOnScreen({ threshold: 0.1 });
+   const { toast } = useToast();
 
   const variant = {
     hidden: { opacity: 0, y: 250 },
@@ -35,9 +37,12 @@ const Page = () => {
         return [...prevCart, { ...newItem, quantity: 1 }];
       }
     });
-    console.log("haha fuck you pay me" , cart);
+    toast({
+      title: "Added to Cart",
+      //  "Friday, February 10, 2023 at 5:57 PM",
+    });
   };
-
+  
   const removeFromCart = () => {
     // @ts-ignore
     setCart((prevCart) => prevCart.filter((item) => item.id !== item.id));
