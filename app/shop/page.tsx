@@ -16,6 +16,10 @@ const Page = () => {
     hidden: { opacity: 0, y: 250 },
     visible: { opacity: 1, y: 0 },
   };
+    const variant2 = {
+      hidden: { opacity: 0, x: -250 },
+      visible: { opacity: 1, x: 0 },
+    };
 
   // const item = Items
 
@@ -67,7 +71,7 @@ const Page = () => {
             ref={ref}
             initial="hidden"
             animate={isVisible ? "visible" : "hidden"}
-            variants={variant}
+            variants={variant2}
             transition={{ duration: 1 }}
           >
             <p className="font-montserrat text-4xl sm:text-6xl text-white">
