@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { HiBars2 } from "react-icons/hi2";
 import Sidebar from "./Sidebar";
+import Cart from "./shop/cart";
 
 const Header = () => {
   return (
@@ -18,7 +19,11 @@ const Header = () => {
             />
           </Link>
 
+          <div className="flex items-center gap-3">
+          <Cart/>
           <Sidebar />
+          </div>
+
         </div>
       </div>
     </div>

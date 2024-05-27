@@ -19,31 +19,34 @@ const Page = () => {
 
   const [cart, setCart] = useState([]);
 
- const addToCart = (newItem: any) => {
-   setCart((prevCart: any) => {
-     const itemInCart = prevCart.find(
-       (cartItem: any) => cartItem.id === newItem.id
-     );
+  const addToCart = (newItem: any) => {
+    setCart((prevCart: any) => {
+      const itemInCart = prevCart.find(
+        (cartItem: any) => cartItem.id === newItem.id
+      );
 
-     if (itemInCart) {
-       return prevCart.map((cartItem: any) =>
-         cartItem.id === newItem.id
-           ? { ...cartItem, quantity: cartItem.quantity + 1 }
-           : cartItem
-       );
-     } else {
-       return [...prevCart, { ...newItem, quantity: 1 }];
-     }
-   });
-   console.log(cart);
- };
-
+      if (itemInCart) {
+        return prevCart.map((cartItem: any) =>
+          cartItem.id === newItem.id
+            ? { ...cartItem, quantity: cartItem.quantity + 1 }
+            : cartItem
+        );
+      } else {
+        return [...prevCart, { ...newItem, quantity: 1 }];
+      }
+    });
+    console.log(cart);
+  };
 
   const removeFromCart = () => {
     // @ts-ignore
     setCart((prevCart) => prevCart.filter((item) => item.id !== item.id));
   };
 
+  const getTotalItemCount = () => {
+    // @ts-ignore
+    return cart.reduce((total, item) => total + item.quantity, 0);
+  };
 
   return (
     <div className="">
@@ -90,7 +93,7 @@ const Page = () => {
                   1
                 </span>{" "}
                 <button
-                  onClick={()=>addToCart(item)}
+                  onClick={() => addToCart(item)}
                   className="border border-slate-500 rounded-[100%] h-8 w-8 text-2xl flex flex-col justify-center items-center text-slate-500"
                 >
                   +
@@ -100,9 +103,8 @@ const Page = () => {
           </div>
         ))}
 
-        {cart.map((item, index)=>(
-          <div>{item.name}{item.quantity}</div>
-        ))}
+        
+        <div>total count :{getTotalItemCount()}</div>
       </div>
       <Footer />
     </div>
