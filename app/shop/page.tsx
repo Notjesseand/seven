@@ -110,6 +110,7 @@ const Page = () => {
                   +
                 </button>
               </div>
+              <p className="ml-2 font-montserrat">Add to cart</p>
             </div>
           </div>
         ))}

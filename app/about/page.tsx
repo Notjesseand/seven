@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import useOnScreen from "@/hooks/scroll";
 import { VscThumbsup } from "react-icons/vsc";
 import Footer from "@/components/Footer";
+import Link from "next/link";
 const Page = () => {
   const [ref1, isvisible1] = useOnScreen({ threshold: 0.1 });
   const [ref, isVisible] = useOnScreen({ threshold: 0.1 });
@@ -162,13 +163,14 @@ const Page = () => {
             animate={isVisible5 ? "visible" : "hidden"}
             variants={variant2}
             transition={{ duration: 1 }}
+            className="flex flex-col items-center"
           >
             <p className="text-2xl sm:text-3xl text-center mt-4">
               We develop premium products for your style & comfort
             </p>
-            <button className="py-3 px-16 mt-8 border border-blue-700 hover:border-white bg-blue-700 text-white text-lg rounded-full mx-auto flex">
+            <Link href="/shop" className="py-3 px-16 mt-8 border border-blue-700 hover:border-white bg-blue-700 text-white text-lg rounded-full mx-auto inline-block justify-center">
               Shop Now
-            </button>
+            </Link>
           </motion.div>
         </div>
         <img

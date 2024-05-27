@@ -2,6 +2,7 @@ import React from "react";
 import Carousel from "./carousel";
 import { motion } from "framer-motion";
 import useOnScreen from "@/hooks/scroll";
+import Link from "next/link";
 
 const Experts = () => {
   const [ref, isVisible] = useOnScreen({ threshold: 0.1 });
@@ -34,7 +35,7 @@ const Experts = () => {
             <p className=" text-3xl md:text-5xl w-2/3 mx-auto font-montserrat sm:font-semibold flex justify-center">
               Experience the power of HIM wireless{" "}
             </p>
-            <button className="py-3 px-16 mt-8 border border-blue-700 hover:border-white bg-blue-700 text-white text-lg rounded-full">Shop Now</button>
+            <Link href="/shop" className="py-3 px-16 mt-8 border border-blue-700 hover:border-white bg-blue-700 text-white text-lg rounded-full  inline-block">Shop Now</Link>
           </motion.div>
         </div>
       </div>
