@@ -24,7 +24,7 @@ const Sidebar = () => {
           <div className="text-center w-full space-y-3 pt-14 text-xl font-nunito">
 
           <Link href="/" className="flex text-center justify-center">Home</Link>
-          <Link href="" className="flex text-center justify-center">About Us</Link>
+          <Link href="/about" className="flex text-center justify-center">About Us</Link>
           <Link href="" className="flex text-center justify-center">Shop</Link>
           <Link href="" className="flex text-center justify-center">News</Link>
           <Link href="" className="flex text-center justify-center">Contact</Link>
