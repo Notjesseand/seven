@@ -19,7 +19,7 @@ const Experts = () => {
       <Carousel />
 
       {/* experience the power */}
-      <div className=" w-11/12 sm:w-4/5 mx-auto bg-[url(https://res.cloudinary.com/dv62ty87r/image/upload/v1716788236/Mask-group-11_duexx1.jpg)] py-20 lg:py-0 lg:h-[90vh] rounded bg-cover bg-right mt-14 relative text-white">
+      <div className=" w-11/12 sm:w-4/5 mx-auto bg-[url(https://res.cloudinary.com/dv62ty87r/image/upload/v1716788236/Mask-group-11_duexx1.jpg)] py-20 lg:py-0 lg:h-[90vh] rounded bg-cover bg-right mt-36 relative text-white">
         {/* overlay */}
         <div className="absolute h-full w-full inset-0 bg-gradient-to-b bg-black opacity-40 rounded"></div>
         <div className="relative px-3 md:p-7 sm:p-14 font-montserrat text-center flex flex-col h-full justify-center">
@@ -31,7 +31,7 @@ const Experts = () => {
             variants={variants}
             transition={{ duration: 1 }}
           >
-            <p className="text-5xl w-2/3 mx-auto font-montserrat font-semibold flex justify-center">
+            <p className=" text-3xl md:text-5xl w-2/3 mx-auto font-montserrat sm:font-semibold flex justify-center">
               Experience the power of HIM wireless{" "}
             </p>
             <button className="py-3 px-16 mt-8 border border-blue-700 hover:border-white bg-blue-700 text-white text-lg rounded-full">Shop Now</button>
