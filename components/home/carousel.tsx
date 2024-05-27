@@ -10,7 +10,7 @@ import useOnScreen from "@/hooks/scroll";
 import { motion } from "framer-motion";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
-const introCarousel = () => {
+const IntroCarousel = () => {
   const [ref, isVisible] = useOnScreen({ threshold: 0.1 });
 
   const variants = {
@@ -38,7 +38,7 @@ const introCarousel = () => {
           <p>
             These headphones provide an unparalleled sound experience. The
             clarity and bass response are incredible, making them perfect for
-            DJing. I've never heard my mixes sound this good
+            DJing. I&apos;ve never heard my mixes sound this good
           </p>
           <p className="pt-3 font-semibold">Gregory Red / DJ</p>
         </div>
@@ -52,7 +52,7 @@ const introCarousel = () => {
         />
         <div className="w-5/6 sm:w-2/3 text-center flex flex-col mx-auto pt-8 font-montserrat sm:text-lg">
           <p>
-            "As a singer, I'm amazed at how these headphones capture every
+            "As a singer, I&apos;m amazed at how these headphones capture every
             nuance of my voice. The noise-canceling feature allows me to focus
             completely on my performance, even in noisy environments."
           </p>
@@ -69,7 +69,7 @@ const introCarousel = () => {
           <p>
             "The build quality and sound reproduction of these headphones are
             outstanding. They offer a balanced sound profile that is perfect for
-            studio work. Plus, they're comfortable enough for long sessions."
+            studio work. Plus, they&apos;re comfortable enough for long sessions."
           </p>
           <p className="pt-3 font-semibold"> Richard Black / Sound Producer </p>
         </div>
@@ -78,4 +78,4 @@ const introCarousel = () => {
   );
 };
 
-export default introCarousel;
+export default IntroCarousel;
