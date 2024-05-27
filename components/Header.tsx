@@ -10,11 +10,13 @@ const Header = () => {
         {/* overlay */}
         <div className="absolute h-full w-full bg-gradient-to-t from-transparent to-black opacity-50  inset-0 "></div>
         <div className="w-full flex items-center justify-between relative z-50 pr-5">
-          <img
-            src="https://res.cloudinary.com/dv62ty87r/image/upload/v1716538239/Premium_Vector___Wolf_tech_modern_simple_logo_icon_ideas-removebg-preview_je6aex.png"
-            alt=""
-            className="w-24"
-          />
+          <Link href={"/"} className="flex">
+            <img
+              src="https://res.cloudinary.com/dv62ty87r/image/upload/v1716538239/Premium_Vector___Wolf_tech_modern_simple_logo_icon_ideas-removebg-preview_je6aex.png"
+              alt=""
+              className="w-24"
+            />
+          </Link>
 
           <Sidebar />
         </div>

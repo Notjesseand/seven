@@ -4,11 +4,14 @@ import Header from "@/components/Header";
 import { motion } from "framer-motion";
 import useOnScreen from "@/hooks/scroll";
 import { VscThumbsup } from "react-icons/vsc";
+import Footer from "@/components/Footer";
 const page = () => {
+  const [ref1, isvisible1] = useOnScreen({ threshold: 0.1 });
   const [ref, isVisible] = useOnScreen({ threshold: 0.1 });
   const [ref2, isVisible2] = useOnScreen({ threshold: 0.1 });
   const [ref3, isVisible3] = useOnScreen({ threshold: 0.1 });
   const [ref4, isVisible4] = useOnScreen({ threshold: 0.1 });
+  const [ref5, isVisible5] = useOnScreen({ threshold: 0.1 });
 
   const variants = {
     hidden: { opacity: 0, x: 250 },
@@ -21,13 +24,22 @@ const page = () => {
   };
 
   return (
-    <div className="pb-44 overflow-x-hidden">
+    <div className="overflow-hidden">
       <div className="bg-[url(https://res.cloudinary.com/dv62ty87r/image/upload/v1715771549/samples/landscapes/architecture-signs.jpg)] bg-cover bg-center h-72 sm:h-96 relative">
         {/* overlay */}
         <div className="absolute h-full w-full bg-black inset-0 opacity-60"></div>
         <Header />
         <div className="pt-44 px-7 sm:px-24 relative">
-          <p className="font-montserrat text-4xl text-white">About us</p>
+          <motion.div
+            // @ts-ignore
+            ref={ref1}
+            initial="hidden"
+            animate={isvisible1 ? "visible" : "hidden"}
+            variants={variants}
+            transition={{ duration: 1 }}
+          >
+            <p className="font-montserrat text-4xl text-white">About us</p>
+          </motion.div>
         </div>
       </div>
       {/*  */}
@@ -138,6 +150,33 @@ const page = () => {
           </div>
         </motion.div>
       </div>
+
+      {/*  */}
+      <div className="grid md:grid-cols-2 pt-16 px-6 gap-6 sm:px-9 lg:px-16">
+        <div className="flex flex-col justify-center items-center px-4">
+          <motion.div
+            // @ts-ignore
+            ref={ref5}
+            initial="hidden"
+            animate={isVisible5 ? "visible" : "hidden"}
+            variants={variant2}
+            transition={{ duration: 1 }}
+          >
+            <p className="text-2xl sm:text-3xl text-center mt-4">
+              We develop premium products for your style & comfort
+            </p>
+            <button className="py-3 px-16 mt-8 border border-blue-700 hover:border-white bg-blue-700 text-white text-lg rounded-full mx-auto flex">
+              Shop Now
+            </button>
+          </motion.div>
+        </div>
+        <img
+          src="https://res.cloudinary.com/dv62ty87r/image/upload/v1716810581/Mask-group-35_vursfu.webp"
+          alt=""
+          className="rounded-lg w-full md:w-[30rem] aspect-auto flex mx-auto"
+        />
+      </div>
+      <Footer/>
     </div>
   );
 };
