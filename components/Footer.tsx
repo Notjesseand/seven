@@ -6,8 +6,8 @@ const Footer = () => {
     <div className="pb-7 px-5 sm:px-12 md:px-24 pt-20">
       <div className="w-full border-t border-slate-300 md:flex border-b pb-5">
         {/* newletter */}
-        <div className="md:w-3/5 sm:min-h-[50vh] flex flex-col justify-center">
-          <p className="text-2xl  font-semibold">Newsletter</p>
+        <div className="md:w-3/5 sm:min-h-[35vh] flex flex-col justify-center">
+          <p className="text-2xl  font-semibold pt-6 md:pt-0">Newsletter</p>
           <div className="">
             <input
               type="email"
@@ -27,7 +27,7 @@ const Footer = () => {
           </p>
         </div>
         {/* links */}
-        <div className=" md:w-2/5 sm:min-h-[50vh] mt-8 flex flex-col justify-center sm:pl-12">
+        <div className=" md:w-2/5 sm:min-h-[35vh] mt-8 flex flex-col justify-center sm:pl-12">
           <div className="sm:border-l border-slate-300 h-2/3 sm:px-6 space-y-3 flex flex-col justify-center ">
             <Link href="" className="flex">
               About us

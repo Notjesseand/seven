@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Header from "@/components/Header";
 import { motion } from "framer-motion";
 import useOnScreen from "@/hooks/scroll";
@@ -14,6 +14,36 @@ const Page = () => {
     hidden: { opacity: 0, y: 250 },
     visible: { opacity: 1, y: 0 },
   };
+
+  // const item = Items
+
+  const [cart, setCart] = useState([]);
+
+ const addToCart = (newItem: any) => {
+   setCart((prevCart: any) => {
+     const itemInCart = prevCart.find(
+       (cartItem: any) => cartItem.id === newItem.id
+     );
+
+     if (itemInCart) {
+       return prevCart.map((cartItem: any) =>
+         cartItem.id === newItem.id
+           ? { ...cartItem, quantity: cartItem.quantity + 1 }
+           : cartItem
+       );
+     } else {
+       return [...prevCart, { ...newItem, quantity: 1 }];
+     }
+   });
+   console.log(cart);
+ };
+
+
+  const removeFromCart = () => {
+    // @ts-ignore
+    setCart((prevCart) => prevCart.filter((item) => item.id !== item.id));
+  };
+
 
   return (
     <div className="">
@@ -52,22 +82,29 @@ const Page = () => {
               <p className="text-slate-600">{item.description}</p>
 
               {/* add to cart */}
-              <div className="flex">
+              <div className="flex justify-center md:justify-start">
                 <button className="border border-slate-500 rounded-[100%] h-8 w-8 text-2xl text-slate-500 flex flex-col justify-center items-center">
                   -
                 </button>{" "}
                 <span className="px-5 flex flex-col justify-center text-xl">
                   1
                 </span>{" "}
-                <button className="border border-slate-500 rounded-[100%] h-8 w-8 text-2xl flex flex-col justify-center items-center text-slate-500">
+                <button
+                  onClick={()=>addToCart(item)}
+                  className="border border-slate-500 rounded-[100%] h-8 w-8 text-2xl flex flex-col justify-center items-center text-slate-500"
+                >
                   +
                 </button>
               </div>
             </div>
           </div>
         ))}
+
+        {cart.map((item, index)=>(
+          <div>{item.name}{item.quantity}</div>
+        ))}
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };
