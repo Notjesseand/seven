@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import useOnScreen from "@/hooks/scroll";
 import { VscThumbsup } from "react-icons/vsc";
 import Footer from "@/components/Footer";
-const page = () => {
+const Page = () => {
   const [ref1, isvisible1] = useOnScreen({ threshold: 0.1 });
   const [ref, isVisible] = useOnScreen({ threshold: 0.1 });
   const [ref2, isVisible2] = useOnScreen({ threshold: 0.1 });
@@ -90,7 +90,7 @@ const page = () => {
               product design, we focus on innovation and quality. Each member of
               our team brings a unique perspective, ensuring that our headphones
               are not only technologically advanced but also user-friendly and
-              stylish. We're here to enhance your audio journey, one headphone
+              stylish. We&apos;re here to enhance your audio journey, one headphone
               at a time.
             </p>
           </div>
@@ -181,4 +181,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
