@@ -21,12 +21,12 @@ const Page = () => {
     visible: { opacity: 1, x: 0 },
   };
 
-   interface CartItem {
-     id: number;
-     price: number;
-     quantity: number;
-     [key: string]: any; // Optional: if there are other properties that are not defined explicitly
-   }
+  interface CartItem {
+    id: number;
+    price: number;
+    quantity: number;
+    [key: string]: any; // Optional: if there are other properties that are not defined explicitly
+  }
 
   const [cart, setCart] = useState<CartItem[]>([]);
 
@@ -114,26 +114,33 @@ const Page = () => {
               <p className="text-slate-600">{item.description}</p>
 
               {/* add to cart */}
-              <div className="flex justify-center md:justify-start">
-                <button
-                  className="border border-slate-500 rounded-[100%] h-8 w-8 text-2xl text-slate-500 flex flex-col justify-center items-center"
-                  onClick={() => removeFromCart(item)}
-                >
-                  -
-                </button>{" "}
-                <span className="px-5 flex flex-col justify-center text-xl">
-                  {getItemQuantity(item.id)}
-                </span>{" "}
-                <button
-                  onClick={() => addToCart(item)}
-                  className="border border-slate-500 rounded-[100%] h-8 w-8 text-2xl flex flex-col justify-center items-center text-slate-500"
-                >
-                  +
-                </button>
+              <div className="flex justify-center md:justify-start mt-3">
+                <div className="flex flex-col items-center">
+                  <div className="flex">
+                    <button
+                      className="border border-slate-500 rounded-[100%] h-8 w-8 text-2xl text-slate-500 flex flex-col justify-center items-center"
+                      onClick={() => removeFromCart(item)}
+                    >
+                      -
+                    </button>{" "}
+                    <span className="px-5 flex flex-col justify-center text-xl">
+                      {getItemQuantity(item.id)}
+                    </span>{" "}
+                    <button
+                      onClick={() => addToCart(item)}
+                      className="border border-slate-500 rounded-[100%] h-8 w-8 text-2xl flex flex-col justify-center items-center text-slate-500"
+                    >
+                      +
+                    </button>
+                  </div>
+                  <button
+                    onClick={() => addToCart(item)}
+                    className="ml-2 font-montserrat text-center  md:text-left mt-1"
+                  >
+                    Add to cart
+                  </button>
+                </div>
               </div>
-              <p className="ml-2 font-montserrat text-center  md:text-left">
-                Add to cart
-              </p>
             </div>
           </div>
         ))}

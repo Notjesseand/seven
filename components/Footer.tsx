@@ -29,16 +29,16 @@ const Footer = () => {
         {/* links */}
         <div className=" md:w-2/5 sm:min-h-[35vh] mt-8 flex flex-col justify-center sm:pl-12">
           <div className="sm:border-l border-slate-300 h-2/3 sm:px-6 space-y-3 flex flex-col justify-center ">
-            <Link href="" className="flex">
+            <Link href="/" className="flex">
+              Home
+            </Link>
+            <Link href="/about" className="flex">
               About us
             </Link>
-            <Link href="" className="flex">
+            <Link href="/shop" className="flex">
               Shop
             </Link>
-            <Link href="" className="flex">
-              News
-            </Link>
-            <Link href="" className="flex">
+            <Link href="/contact" className="flex">
               Contact
             </Link>
           </div>
