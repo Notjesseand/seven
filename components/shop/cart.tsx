@@ -21,8 +21,8 @@ const Cart = ({ count, cart }: { count: any; cart: any[] }) => {
         <SheetTrigger>
           {" "}
           <div className="flex relative">
-            <IoCartOutline className="text-4xl cursor-pointer z-50 flex text-orange-600 relative z-10" />
-            <p className="text-black absolute -bottom-1 -left-2 z-40 h-5 w-5 flex items-center justify-center bg-white rounded-full text-sm">
+            <IoCartOutline className="text-4xl cursor-pointer flex text-orange-600 relative z-10" />
+            <p className="text-black absolute bottom-0 left-0 z-40 h-4 w-4 flex items-center justify-center bg-white rounded-full text-xs">
               {count}
             </p>
           </div>
