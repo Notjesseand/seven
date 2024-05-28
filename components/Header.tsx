@@ -19,7 +19,7 @@ const Header = ({ count, cart }: { count: number; cart: any[] }) => {
             <img
               src="https://res.cloudinary.com/dv62ty87r/image/upload/v1716538239/Premium_Vector___Wolf_tech_modern_simple_logo_icon_ideas-removebg-preview_je6aex.png"
               alt=""
-              className="w-24"
+              className="w-20 h-auto"
             />
           </Link>
 
