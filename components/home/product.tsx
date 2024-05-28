@@ -4,6 +4,7 @@ import useOnScreen from "@/hooks/scroll";
 import { BsPhone } from "react-icons/bs";
 import { VscWorkspaceTrusted } from "react-icons/vsc";
 import { varianty } from "@/hooks/variant";
+import Link from "next/link";
 
 const Product = () => {
   const [ref, isVisible] = useOnScreen({ threshold: 0.1 });
@@ -48,9 +49,12 @@ const Product = () => {
               <li className="dot-list">Quick Start Guide</li>
               <li className="dot-list"> USB Charging Cable</li>
             </ul>
-            <button className="px-8 py-2 border-black hover:bg-black hover:text-white border rounded-full mt-6">
+            <Link
+              href="/shop"
+              className="inline-block px-8 py-2 border-black hover:bg-black hover:text-white border rounded-full mt-6"
+            >
               Buy online
-            </button>
+            </Link>
           </motion.div>
         </div>
       </div>
@@ -179,10 +183,10 @@ const Product = () => {
             <p className="leading-7 mt-3">
               Experience sound like never before with our state-of-the-art
               headphones. Designed for audio clarity, our headphones ensure
-              every note and beat is delivered with precision. Whether you&apos;re
-              enjoying your favorite music, gaming, or taking calls, our
-              advanced sound technology offers unmatched quality. Dive into a
-              world of clear, crisp, and immersive audio.
+              every note and beat is delivered with precision. Whether
+              you&apos;re enjoying your favorite music, gaming, or taking calls,
+              our advanced sound technology offers unmatched quality. Dive into
+              a world of clear, crisp, and immersive audio.
             </p>
           </motion.div>
         </div>

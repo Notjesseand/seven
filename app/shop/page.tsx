@@ -21,9 +21,14 @@ const Page = () => {
     visible: { opacity: 1, x: 0 },
   };
 
-  // const item = Items
+   interface CartItem {
+     id: number;
+     price: number;
+     quantity: number;
+     [key: string]: any; // Optional: if there are other properties that are not defined explicitly
+   }
 
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState<CartItem[]>([]);
 
   const addToCart = (newItem: any) => {
     setCart((prevCart: any) => {
@@ -47,9 +52,16 @@ const Page = () => {
     });
   };
 
-  const removeFromCart = () => {
-    // @ts-ignore
-    setCart((prevCart) => prevCart.filter((item) => item.id !== item.id));
+  const removeFromCart = (itemToRemove: any) => {
+    setCart((prevCart: any) =>
+      prevCart
+        .map((item: any) =>
+          item.id === itemToRemove.id
+            ? { ...item, quantity: item.quantity - 1 }
+            : item
+        )
+        .filter((item: any) => item.quantity > 0)
+    );
   };
 
   const getTotalItemCount = () => {
@@ -57,7 +69,13 @@ const Page = () => {
     return cart.reduce((total, item) => total + item.quantity, 0);
   };
 
+  // total quantity of all items in the cart
   const totalCount = getTotalItemCount();
+
+  const getItemQuantity = (id: any) => {
+    const item = cart.find((cartItem: any) => cartItem.id === id);
+    return item ? item.quantity : 0;
+  };
 
   return (
     <div className="">
@@ -97,11 +115,14 @@ const Page = () => {
 
               {/* add to cart */}
               <div className="flex justify-center md:justify-start">
-                <button className="border border-slate-500 rounded-[100%] h-8 w-8 text-2xl text-slate-500 flex flex-col justify-center items-center">
+                <button
+                  className="border border-slate-500 rounded-[100%] h-8 w-8 text-2xl text-slate-500 flex flex-col justify-center items-center"
+                  onClick={() => removeFromCart(item)}
+                >
                   -
                 </button>{" "}
                 <span className="px-5 flex flex-col justify-center text-xl">
-                  1
+                  {getItemQuantity(item.id)}
                 </span>{" "}
                 <button
                   onClick={() => addToCart(item)}
@@ -110,7 +131,9 @@ const Page = () => {
                   +
                 </button>
               </div>
-              <p className="ml-2 font-montserrat text-center  md:text-left">Add to cart</p>
+              <p className="ml-2 font-montserrat text-center  md:text-left">
+                Add to cart
+              </p>
             </div>
           </div>
         ))}

@@ -80,6 +80,11 @@
   padding-left: 20px; /* Adjust padding as needed */
 }
 
+/* body{
+  overflow-y: hidden;
+} */
+
+
 .gradient-text {
   color: transparent;
   background: conic-gradient(
