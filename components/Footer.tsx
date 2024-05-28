@@ -12,7 +12,7 @@ const Footer = () => {
             <input
               type="email"
               placeholder="email"
-              className="py-2 rounded-full border-slate-600 w-80 sm:w-96 border px-2 mt-2 flex sm:inline mx-auto"
+              className="py-2.5 rounded-full border-slate-600 w-full sm:w-96 border px-2 mt-2 flex sm:inline mx-auto"
             />
             <div className="flex sm:inline mx-auto justify-center text">
               <button className="mt-3 flex justify-center sm:inline-block ml-1 py-2 px-12 sm:px-16 border border-blue-700 hover:border-orange-600 bg-blue-700 text-white text-lg rounded-full">

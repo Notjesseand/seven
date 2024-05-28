@@ -82,10 +82,10 @@ const Page = () => {
       </div>
 
       {/* items */}
-      <div className=" px-5  sm:px-12 md:px-20">
+      <div className=" px-5 sm:px-12 md:px-20">
         {Items.map((item, index) => (
           <div
-            className="grid grid-cols-1 sm:grid-cols-3 mt-12 items-center gap-3"
+            className="grid grid-cols-1 sm:grid-cols-3 mt-12 items-center gap-3 justify-center"
             key={index}
           >
             <Carousel images={item.images} />
@@ -110,7 +110,7 @@ const Page = () => {
                   +
                 </button>
               </div>
-              <p className="ml-2 font-montserrat">Add to cart</p>
+              <p className="ml-2 font-montserrat text-center  md:text-left">Add to cart</p>
             </div>
           </div>
         ))}

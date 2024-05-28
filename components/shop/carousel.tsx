@@ -13,7 +13,7 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 const Carousel = ({ images }) => {
   const data = images;
   return (
-    <div className="flex h-full">
+    <div className="flex">
       <Swiper
         // navigation={true}
         modules={[Navigation, Pagination, Autoplay]}
@@ -22,11 +22,15 @@ const Carousel = ({ images }) => {
           delay: 8000,
           disableOnInteraction: false,
         }}
-        className="mySwiper justify-start"
+        className="mySwiper justify-center flex mx-auto items-center text-center"
       >
         {data.map((item: any, index: number) => (
           <SwiperSlide className="text-center" key={index}>
-            <img src={item} alt="" className=" w-11/12 flex rounded-lg  mx-auto" />
+            <img
+              src={item}
+              alt=""
+              className=" w-11/12 flex rounded-lg mx-auto"
+            />
           </SwiperSlide>
         ))}
       </Swiper>
