@@ -6,6 +6,7 @@ const Hero = () => {
   const [ref, isVisible] = useOnScreen({ threshold: 0.1 });
   const [ref2, isVisible2] = useOnScreen({ threshold: 0.1 });
   const [ref3, isVisible3] = useOnScreen({ threshold: 0.1 });
+  const [ref4, isVisible4] = useOnScreen({ threshold: 0.1 });
 
   const variants = {
     hidden: { opacity: 0, x: -350 },
